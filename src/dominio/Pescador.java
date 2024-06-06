@@ -1,24 +1,13 @@
 package dominio;
 
-public class Pescador {
-    private String nome;
-    private String registro;
 
-    public Pescador(String nome, String registro) {
-        this.nome = nome;
-        this.registro = registro;
-    }
-
-    public String obterInformacoes() {
-        return "Nome: " + nome + ", Registro: " + registro;
-    }
-
-    public boolean validarRegistro(String registro) {
-        return this.registro.equals(registro);
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
+public class Pescador extends Usuario{
+	private String registro;
+	private boolean verificado;
+	
+	public Pescador(String nome, String login, String senha, String registro, boolean verificado) {
+		super(nome, login, senha);
+		this.registro = registro;
+		this.verificado = verificado;
+	}
 }

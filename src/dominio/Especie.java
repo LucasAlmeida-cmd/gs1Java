@@ -11,20 +11,12 @@ public class Especie {
         this.periodoDefeso = periodoDefeso;
     }
 
-    public boolean verificarDisponibilidade(String periodo) {
-        return !this.periodoDefeso.equals(periodo);
-    }
-
-    public String obterInformacoes() {
-        return "Espécie: " + nome + ", Habitat: " + habitat + ", Período de Defeso: " + periodoDefeso;
-    }
-
-    public boolean estaEmPeriodoDefeso(String periodo) {
-        return this.periodoDefeso.equals(periodo);
-    }
-
-    public String getNome() {
-        return nome;
+    public String exibirEspecie() {
+    	String especie = ("Nome da Espécie: " + nome + 
+    			"\nHabitat da Espécie: " + habitat + 
+    			"\nPeríodo de Defeso: " + periodoDefeso);
+    	
+    	return especie;
     }
 
 }
